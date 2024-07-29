@@ -251,7 +251,7 @@ def song_matches():
         else:
             return {"status": "error", "message": "Song failed to save. Please try again"}, 500
 
-     # The following code just grab's the page we came from so that we can redirect the user to it
+    # The following code just grab's the page we came from so that we can redirect the user to it
     previous_page = session.get('previous_page')
     if previous_page == 'match_the_day_info':
         city = session.get('city')
