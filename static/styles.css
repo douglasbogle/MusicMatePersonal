@@ -1,0 +1,474 @@
+/* Dot effect keyframes */
+@keyframes move {
+  from {
+    transform: rotate(0deg) scale(12) translateX(-20px);
+  }
+  to {
+    transform: rotate(360deg) scale(18) translateX(20px);
+  }
+}
+/* Mixin for dots */
+/* Global Styles */
+html {
+  font: 2vmin/.7 Serif;
+  background: #123;
+  position: relative;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1%, rgba(0, 0, 0, 0.1) 30%);
+  background-size: 100px 100px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Dot effect */
+body::before, body::after, html::before, html::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3em;
+  height: 3em;
+  content: ".";
+  mix-blend-mode: screen;
+  z-index: -1;
+  animation: move infinite ease-in-out alternate;
+}
+
+body::before {
+  text-shadow: 2.3454992726em 2.0391661569em 7px hsla(168.1940045415, 100%, 50%, 0.9), 2.3555681807em 2.1957006635em 7px hsla(268.3276177713, 100%, 50%, 0.9), 0.0254012776em 1.4467159044em 7px hsla(219.1987924599, 100%, 50%, 0.9), 1.4921261951em 1.1534265567em 7px hsla(41.7240238813, 100%, 50%, 0.9), -0.2288020147em 0.6493224175em 7px hsla(153.9405195932, 100%, 50%, 0.9), 1.7500170983em 0.4658023106em 7px hsla(95.501653508, 100%, 50%, 0.9), 0.8824471447em 2.1070702939em 7px hsla(274.4863447214, 100%, 50%, 0.9), 1.9813383133em 1.9475184982em 7px hsla(163.2390460943, 100%, 50%, 0.9), 0.7207147361em 1.4524177536em 7px hsla(198.9585084121, 100%, 50%, 0.9), 0.0088458069em 2.4698499527em 7px hsla(59.9468130216, 100%, 50%, 0.9), 2.2032637094em 2.4025382637em 7px hsla(117.2535721482, 100%, 50%, 0.9), 1.8274719897em 0.2583035154em 7px hsla(118.4822054101, 100%, 50%, 0.9), 2.0331453563em 0.1388824213em 7px hsla(181.4077707587, 100%, 50%, 0.9), 0.4432420395em 1.8191863586em 7px hsla(50.0490207685, 100%, 50%, 0.9), 1.7839332138em -0.4248348822em 7px hsla(75.1739478456, 100%, 50%, 0.9), 1.8415920578em 2.4592111308em 7px hsla(291.8236952152, 100%, 50%, 0.9), 1.5653601334em 2.3598115012em 7px hsla(208.7331882705, 100%, 50%, 0.9), 1.522559333em 0.0876294526em 7px hsla(29.4075053407, 100%, 50%, 0.9), -0.4677293989em 1.7354705309em 7px hsla(280.9113328488, 100%, 50%, 0.9), 2.2479451571em 1.668446391em 7px hsla(79.6355762062, 100%, 50%, 0.9), 0.9335970823em 0.4371688548em 7px hsla(268.1769794952, 100%, 50%, 0.9), 1.5149763898em -0.0563071287em 7px hsla(280.8394841543, 100%, 50%, 0.9), 1.7368319135em 1.5577155968em 7px hsla(297.4549095794, 100%, 50%, 0.9), 0.3798991018em 0.6447163726em 7px hsla(77.3481323496, 100%, 50%, 0.9), 2.315783257em 1.3597873514em 7px hsla(99.2844410961, 100%, 50%, 0.9), 2.0108630859em 0.630554297em 7px hsla(34.9345357399, 100%, 50%, 0.9), 1.4979373778em 0.3415491433em 7px hsla(160.0172686619, 100%, 50%, 0.9), 1.6652234403em 1.7934389264em 7px hsla(25.0711619816, 100%, 50%, 0.9), 1.7796513078em 2.4930316827em 7px hsla(262.8768479737, 100%, 50%, 0.9), -0.1432639268em 0.6464937105em 7px hsla(289.5433343258, 100%, 50%, 0.9), 1.0074841407em -0.0257663505em 7px hsla(332.7997084034, 100%, 50%, 0.9), 2.2314108058em 1.491650226em 7px hsla(147.3335333415, 100%, 50%, 0.9), 0.918694992em 1.6213257231em 7px hsla(330.5607866308, 100%, 50%, 0.9), 2.0013137177em -0.4429289474em 7px hsla(195.2153931447, 100%, 50%, 0.9), 1.0989012809em 1.3127164581em 7px hsla(97.2182469056, 100%, 50%, 0.9), 0.3196346534em 0.4070577515em 7px hsla(266.0249537899, 100%, 50%, 0.9), 0.795000775em 1.945014481em 7px hsla(73.8943666214, 100%, 50%, 0.9), 1.2309966566em 1.4699226829em 7px hsla(29.3724282402, 100%, 50%, 0.9), 0.4739576353em 1.5888936376em 7px hsla(173.5510512426, 100%, 50%, 0.9), 0.7182878315em 1.8481684322em 7px hsla(231.61844917, 100%, 50%, 0.9), 2.1385982828em 2.0120412983em 7px hsla(196.5764266744, 100%, 50%, 0.9);
+  animation-duration: 44s;
+  animation-delay: -27s;
+}
+
+body::after {
+  text-shadow: 2.3942541748em 1.5069718627em 7px hsla(292.7617215034, 100%, 50%, 0.9), 0.2499217753em -0.1966786521em 7px hsla(35.7341586635, 100%, 50%, 0.9), 0.2657793488em 0.8574599641em 7px hsla(117.6045389973, 100%, 50%, 0.9), 2.1045032715em 1.148796441em 7px hsla(331.6460347603, 100%, 50%, 0.9), -0.2227134321em 0.4654492188em 7px hsla(353.3080707239, 100%, 50%, 0.9), 2.0132146466em 1.9120847741em 7px hsla(56.9472113762, 100%, 50%, 0.9), 1.3456639547em 0.3814761614em 7px hsla(91.5224472041, 100%, 50%, 0.9), 0.9940338582em -0.4628302195em 7px hsla(102.5064842829, 100%, 50%, 0.9), 1.1954053129em 1.3139000868em 7px hsla(142.4508090403, 100%, 50%, 0.9), 2.3851138489em -0.3095372274em 7px hsla(190.7178232326, 100%, 50%, 0.9), 0.5533159276em 0.0468938139em 7px hsla(355.7893412661, 100%, 50%, 0.9), 1.1253172212em 2.2642855444em 7px hsla(144.616986582, 100%, 50%, 0.9), 0.738591871em 1.3491859444em 7px hsla(323.9381366482, 100%, 50%, 0.9), 0.4004298028em 1.5288915741em 7px hsla(154.5689483928, 100%, 50%, 0.9), -0.2134339166em 2.2470936626em 7px hsla(102.7474335499, 100%, 50%, 0.9), 1.8246038181em 2.2189293159em 7px hsla(293.4169290726, 100%, 50%, 0.9), 1.187567112em 0.2583953143em 7px hsla(41.3752757884, 100%, 50%, 0.9), 2.1124892876em 0.6077765036em 7px hsla(185.0999313979, 100%, 50%, 0.9), 0.3829683976em 0.5538100839em 7px hsla(293.5480681504, 100%, 50%, 0.9), -0.1742666104em -0.2221199766em 7px hsla(146.4729620329, 100%, 50%, 0.9), 1.5225053397em 0.9681974863em 7px hsla(318.0251971592, 100%, 50%, 0.9), -0.0237939174em 0.024378979em 7px hsla(25.7753886392, 100%, 50%, 0.9), 1.1818851327em 0.1293787925em 7px hsla(224.5067802507, 100%, 50%, 0.9), 1.386407629em -0.1518638838em 7px hsla(121.9250216332, 100%, 50%, 0.9), 2.0025048087em 2.3923159101em 7px hsla(249.2550475596, 100%, 50%, 0.9), 1.7081500231em 1.1061287583em 7px hsla(146.589003956, 100%, 50%, 0.9), 2.2678684178em 1.5184910859em 7px hsla(207.1331759807, 100%, 50%, 0.9), 1.1803308801em -0.2102438148em 7px hsla(97.792045564, 100%, 50%, 0.9), 0.9829966329em -0.0793991933em 7px hsla(109.337099007, 100%, 50%, 0.9), 2.2207217897em 0.2594717366em 7px hsla(329.7682968821, 100%, 50%, 0.9), -0.0334316898em 0.4778885666em 7px hsla(142.7557926287, 100%, 50%, 0.9), 1.7225493947em 0.4872111847em 7px hsla(90.4480646532, 100%, 50%, 0.9), 0.4046970662em 2.2371295313em 7px hsla(32.0043624452, 100%, 50%, 0.9), 0.542727943em -0.0308360818em 7px hsla(36.1737590369, 100%, 50%, 0.9), 0.96602537em 2.3918152708em 7px hsla(5.2492990272, 100%, 50%, 0.9), 1.0427459947em 0.1647288995em 7px hsla(293.8904752383, 100%, 50%, 0.9), -0.1992142397em 0.2658441775em 7px hsla(343.7135270513, 100%, 50%, 0.9), 1.7967010012em -0.0589976056em 7px hsla(151.9717972851, 100%, 50%, 0.9), 0.8318963834em 1.1707993417em 7px hsla(111.6082916353, 100%, 50%, 0.9), 2.2697327774em 1.9116497396em 7px hsla(178.7310949512, 100%, 50%, 0.9), 1.628205548em 2.3916381247em 7px hsla(325.973524028, 100%, 50%, 0.9);
+  animation-duration: 43s;
+  animation-delay: -32s;
+}
+
+html::before {
+  text-shadow: 1.8726291067em 0.8421261106em 7px hsla(281.9227168879, 100%, 50%, 0.9), 0.0273067663em 0.8758139264em 7px hsla(259.651388733, 100%, 50%, 0.9), 1.7420053891em 0.9845492151em 7px hsla(230.339028609, 100%, 50%, 0.9), -0.4393821317em 1.0756311872em 7px hsla(210.391835215, 100%, 50%, 0.9), 1.9911215708em 2.0034575155em 7px hsla(247.6627646875, 100%, 50%, 0.9), 1.6077613249em -0.189389432em 7px hsla(235.5366635184, 100%, 50%, 0.9), 1.3702600483em 0.1635856632em 7px hsla(314.2363845314, 100%, 50%, 0.9), 1.3629402423em 2.2351324534em 7px hsla(203.4863191964, 100%, 50%, 0.9), 1.1159572381em 0.2685624409em 7px hsla(207.6444493721, 100%, 50%, 0.9), 0.6995731728em -0.2863613705em 7px hsla(151.3201528767, 100%, 50%, 0.9), 0.6878123688em 0.6563666189em 7px hsla(214.4282179301, 100%, 50%, 0.9), 0.3591060763em -0.1418765266em 7px hsla(130.1828403384, 100%, 50%, 0.9), 0.0693093946em 0.0395199983em 7px hsla(316.3238093603, 100%, 50%, 0.9), 2.0133800849em 1.5578313146em 7px hsla(173.7733749888, 100%, 50%, 0.9), 0.4821954479em 1.0011982885em 7px hsla(132.8141736142, 100%, 50%, 0.9), 0.62252182em 1.1065901043em 7px hsla(106.0231568547, 100%, 50%, 0.9), 1.2274278343em 0.4914015111em 7px hsla(102.0415117297, 100%, 50%, 0.9), 1.7476005458em -0.0201732372em 7px hsla(311.5224963546, 100%, 50%, 0.9), 0.2345768677em 0.3215429707em 7px hsla(1.3562308692, 100%, 50%, 0.9), 0.0237075384em 1.3338440734em 7px hsla(267.440102211, 100%, 50%, 0.9), 1.883516399em 1.3505839975em 7px hsla(316.104499856, 100%, 50%, 0.9), 1.4471399267em 0.6859537864em 7px hsla(170.7804420138, 100%, 50%, 0.9), 0.6282109563em 0.2846381754em 7px hsla(229.8926284916, 100%, 50%, 0.9), 0.2128356211em 0.7292892811em 7px hsla(31.7575375715, 100%, 50%, 0.9), -0.3995006808em 1.446309466em 7px hsla(24.7558341919, 100%, 50%, 0.9), 1.5934866739em 1.7366862715em 7px hsla(129.2599157274, 100%, 50%, 0.9), 0.2256590773em 1.1414342813em 7px hsla(21.3816581126, 100%, 50%, 0.9), 1.366258184em 2.1122306491em 7px hsla(4.0346544825, 100%, 50%, 0.9), 1.133789423em -0.4451085742em 7px hsla(17.0959932238, 100%, 50%, 0.9), 0.8791484197em 0.2436425485em 7px hsla(19.2992139329, 100%, 50%, 0.9), 0.6181261879em 2.420051815em 7px hsla(5.8158717605, 100%, 50%, 0.9), -0.0714002192em 1.5556394679em 7px hsla(15.3799797934, 100%, 50%, 0.9), 2.1849935957em 1.9004472985em 7px hsla(46.5480866912, 100%, 50%, 0.9), 1.2376374512em 2.3592856917em 7px hsla(344.9923141719, 100%, 50%, 0.9), 2.0817630965em 0.7203139978em 7px hsla(70.4416684813, 100%, 50%, 0.9), 0.4411879923em 0.7528001191em 7px hsla(24.6150470695, 100%, 50%, 0.9), 1.8671462647em 1.0560289725em 7px hsla(311.1417201956, 100%, 50%, 0.9), 0.2584568615em 1.8928413342em 7px hsla(182.3913739454, 100%, 50%, 0.9), 1.9377702291em 1.8911026536em 7px hsla(236.8861214885, 100%, 50%, 0.9), 2.2938241503em 2.1497720387em 7px hsla(80.7992594876, 100%, 50%, 0.9), 0.6825132661em 0.4561971594em 7px hsla(184.1275856757, 100%, 50%, 0.9);
+  animation-duration: 42s;
+  animation-delay: -23s;
+}
+
+html::after {
+  text-shadow: -0.2238946532em 1.0656211132em 7px hsla(95.3795593963, 100%, 50%, 0.9), 1.1168585937em 0.762654411em 7px hsla(277.3264712656, 100%, 50%, 0.9), 1.6593914351em 1.8153971632em 7px hsla(8.7540214362, 100%, 50%, 0.9), 0.577182148em 1.4082418666em 7px hsla(309.8546281595, 100%, 50%, 0.9), -0.3481474708em 0.7884122394em 7px hsla(146.2854925003, 100%, 50%, 0.9), 1.8205838557em -0.2009080469em 7px hsla(102.6929678534, 100%, 50%, 0.9), 0.8415201199em 0.3635062391em 7px hsla(275.651006669, 100%, 50%, 0.9), 0.6172562209em 2.1119069835em 7px hsla(0.6689003159, 100%, 50%, 0.9), 1.3999443604em 2.0264229036em 7px hsla(120.6311328047, 100%, 50%, 0.9), 1.2749786673em 1.9423033262em 7px hsla(259.3501280815, 100%, 50%, 0.9), -0.0360235056em 0.6897603196em 7px hsla(137.3648989524, 100%, 50%, 0.9), 1.9306266763em 0.356651034em 7px hsla(307.9940857199, 100%, 50%, 0.9), 1.3536700181em -0.0177730005em 7px hsla(31.4028581279, 100%, 50%, 0.9), 2.3203187508em 2.292127383em 7px hsla(17.2521431757, 100%, 50%, 0.9), 1.8794595576em 1.9562970132em 7px hsla(116.6337116439, 100%, 50%, 0.9), 0.3693768214em 0.8603386015em 7px hsla(171.5162063803, 100%, 50%, 0.9), 1.9541629058em -0.2999173195em 7px hsla(342.2218980697, 100%, 50%, 0.9), 1.2540232426em 1.9025914687em 7px hsla(350.4684003831, 100%, 50%, 0.9), 1.3651186234em 0.6847903771em 7px hsla(255.5821313702, 100%, 50%, 0.9), 0.8118250659em 1.461896952em 7px hsla(125.7753712179, 100%, 50%, 0.9), 2.3025129082em 2.3412379978em 7px hsla(50.3792343044, 100%, 50%, 0.9), 0.1203215941em 0.5488207241em 7px hsla(150.5698167271, 100%, 50%, 0.9), 1.3825908566em 0.8154642824em 7px hsla(306.3058248691, 100%, 50%, 0.9), 1.4600954263em 2.2173458097em 7px hsla(296.2861878175, 100%, 50%, 0.9), 0.0633629634em 0.6286501329em 7px hsla(307.8435033624, 100%, 50%, 0.9), 0.0647779255em 0.4013955531em 7px hsla(79.7513122825, 100%, 50%, 0.9), 1.9239608271em -0.3269056184em 7px hsla(264.2931382973, 100%, 50%, 0.9), -0.2352846959em -0.4884144027em 7px hsla(213.7206676251, 100%, 50%, 0.9), -0.4776062049em 1.4501316033em 7px hsla(289.3412338994, 100%, 50%, 0.9), 0.3919768888em 0.4188710969em 7px hsla(200.9050318961, 100%, 50%, 0.9), -0.1325602979em 1.984032843em 7px hsla(0.4412899263, 100%, 50%, 0.9), 1.9877789131em -0.4595094294em 7px hsla(2.9823946606, 100%, 50%, 0.9), 0.7734361036em 1.7344914006em 7px hsla(228.1601331009, 100%, 50%, 0.9), 1.5552060734em -0.2442305937em 7px hsla(243.9246408265, 100%, 50%, 0.9), 2.0493053363em 0.0154688494em 7px hsla(309.5091611501, 100%, 50%, 0.9), 2.0304278583em 0.2262396376em 7px hsla(51.2236879173, 100%, 50%, 0.9), 2.2904040606em 2.4587444822em 7px hsla(244.9462252586, 100%, 50%, 0.9), 1.6857353125em 0.3711261884em 7px hsla(352.0431536196, 100%, 50%, 0.9), 1.3423693812em 1.4392981857em 7px hsla(37.6101123284, 100%, 50%, 0.9), 2.1951155731em 1.4798412356em 7px hsla(246.6021631099, 100%, 50%, 0.9), -0.0751462673em 2.2748254796em 7px hsla(182.9929286233, 100%, 50%, 0.9);
+  animation-duration: 41s;
+  animation-delay: -19s;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:  #313336;
+  z-index: 10;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(229, 234, 239); /* Text color for nav links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  padding-top: 1rem !important;
+  margin: auto !important;
+}
+
+.nav-link:hover {
+  color: #222bd5; /* Change to desired hover color */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white; /* Accent color for brand name */
+  padding-top: 0rem !important;
+}
+
+.alert {
+  margin-top: 15px;
+}
+
+.centered {
+  text-align: center !important;
+}
+
+.saved-container {
+  background: transparent;
+  margin: auto;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/*.input-text {
+  width: 100%;
+  padding: 3px !important;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}*/
+
+
+
+.forms-container {
+  background: transparent;
+  margin: auto;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  max-width: 50%;
+}
+
+.forms-container label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.forms-container input {
+  width: 200px !important;
+  padding: 10px !important;
+  margin-bottom: 15px; /* Space between fields */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /*box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.dropdown-container {
+  margin-top:2% !important;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.custom-container {
+  background: transparent;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
+  color: #333333; /* Dark text for better readability */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  color: #333333;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.feature {
+  margin-bottom: 30px;
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-custom {
+  margin: 5px 0;
+  color: white;
+  background-color: #007BFF; /* Primary color for buttons */
+  font-size: 1.4rem;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+}
+
+.text-align-left {
+  text-align: left;
+  margin-left: 20px;
+  color: #333333;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+ .button-container-day, .button-container-mood, .button-container-song, .button-container-saved {
+      margin-right: auto;
+      margin-left: auto;
+  }
+}
+
+/* Saved Songs Page Styles */
+.saved-songs-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007BFF; /* Primary color for headers */
+}
+
+.saved-songs-container {
+  margin: 100px auto;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  color: #333333;
+}
+
+/* Playlist Section */
+.playlist-header {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.playlist-item {
+  color: #333333;
+}
+
+/* Song Section */
+.song-header {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.top-pad {
+  margin-top: 5% !important;
+}
+.saved-song-item {
+  color: #333333;
+  text-align: center !important;
+}
+
+.saved-title {
+  color: #007BFF !important;
+}
+
+.btn-success {
+  margin-bottom: 10px;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1rem;
+}
+
+.btn-btm {
+  margin: 0.1rem;
+  background-color: #007BFF !important;
+  color: white !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.button-spacing {
+  margin: 0.5rem;
+}
+
+.styled-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.scrollable-container {
+  max-height: calc(100vh - 100px); 
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px; 
+  align-items: center;
+  
+}
+
+.bg-gray {
+  background-color: #313336;
+}
+
+.scrollable-section {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #2a2c2e;;
+  text-align: center !important;
+  align-items: center !important;
+  align-content: center !important;
+  align-self: center !important;
+}
+
+.flash-messages {
+  margin-bottom: 20px;
+}
+
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.song-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  color: #333333;
+}
+
+.album-cover {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.song-info {
+  text-align: center;
+  color: #333333;
+}
+
+
+.text-header{
+  color: white;
+  
+}
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  /*font-weight: bold;*/
+  color: rgb(229, 234, 239);
+  background-color: #313336;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.un-pad {
+  margin-bottom: 0px !important;
+}
+
+img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+label {
+  font-family: 'Arial', sans-serif; 
+  font-weight: bold; 
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  color: rgb(229, 234, 239);
+  background-color: #313336;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+animation-container {
+  position: relative;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  
+  white-space: nowrap !important;
+  width: 50ch; /* Adjust to fit your text */
+  border-right: 2px solid rgb(0, 0, 0) !important; /* Cursor effect */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 50ch; } /* Adjust to fit your text */
+}
+
+@keyframes erase {
+  from { width: 50ch; } /* Adjust to fit your text */
+  to { width: 0; }
+}
+
+@keyframes cursor-blink {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(0, 0, 0) !important; }
+}
+
+#animated-text {
+  font-size: 1.5rem;
+  animation: typing 1s steps(20, end) 1, cursor-blink 0.75s step-end infinite;
+  color:white;
+}
+
+/*# sourceMappingURL=styles.css.map */

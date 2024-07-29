@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class = "custom-container">
+    <h1 class = 'text-header'>Welcome, {{ user.username }}</h1>
+    <div class="animation-container">
+        <span id="animated-text">Match the day</span>
+    </div>
+    <!-- Updated button styling for modern look -->
+    <a href="{{ url_for('match_the_day_info') }}" class="btn-primary">Match the Day 🌤️</a>
+    <a href="{{ url_for('match_the_mood_info') }}" class="btn-primary">Match the Mood 🫠</a>
+    <a href="{{ url_for('match_the_song_info') }}" class="btn-primary">Match the Song 🎵</a>
+    <a href="{{ url_for('saved_songs') }}" class="btn-primary">Saved Songs 🩵</a>
+    <!-- The following button format works:-->
+</div>
+{% endblock %}

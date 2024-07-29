@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Select info to fetch songs{% endblock %}
+
+{% block content %}
+<div class="custom-container">
+    <h2 class="text-header">Describe your Mood below!</h2>
+    <form method="POST" action="{{ url_for('match_the_mood_info') }}">
+        <label for="city" class="text-header">Describe how you're feeling:</label><br>
+        <input type="text" class="styled-input" id="mood" name="mood" placeholder="Enter your mood" required><br><br>
+
+        <label for="genre" class="text-header">Select a genre:</label><br>
+        <select id="genre" name="genre" required>
+            {% for genre in genres %}
+                <option value="{{ genre }}">{{ genre }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <input type="submit" value="Get Songs">
+    </form>
+{% endblock %}
